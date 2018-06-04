@@ -1,29 +1,37 @@
 import React, {Component} from 'react';
+import {Link} from 'react-router-dom';
 
 class TopNav extends Component {
     render() {
         return (
             <div>
-                <nav class="navbar">
-                    <div class="container">
-                        <ul class="navbar-list">
+                <nav className="navbar">
+                    <div className="container">
+                        <ul className="navbar-list">
                             <span id="navbar-list-lg">
-                                <li class="navbar-item"><a class="navbar-link" href="/">About</a></li>
-                                <li class="navbar-item"><a class="navbar-link" href="/articles">Articles</a></li>
-                                <li class="navbar-item"><a class="navbar-link" href="/software">Software</a></li>
+                                <li className="navbar-item">
+                                    <Link to="/" className="navbar-link">About</Link>
+                                </li>
+                                <li className="navbar-item">
+                                    <Link to="/articles" className="navbar-link">Articles</Link>
+                                </li>
+                                <li className="navbar-item">
+                                    <Link to="/software" className="navbar-link">Software</Link>
+                                </li>
                             </span>
 
                             <span id="navbar-list-sm">
-                                <li id="sm-menu-btn" class="navbar-item">
-                                    <a class="navbar-link">
+                                <li id="sm-menu-btn" className="navbar-item">
+                                    <a className="navbar-link">
                                         <span id="menu-icon">
-                                            <span class="fa fa-bars fa-2x"></span>
+                                            <span className="fa fa-bars fa-2x"></span>
                                         </span>
-                                        </a><div class="menu-dropdown-content"><a class="navbar-link">
-                                            </a><a href="/">About</a>
-                                            <a href="/articles">Articles</a>
-                                            <a href="/software">Software</a>
-                                        </div>
+                                    </a>
+                                    <div className="menu-dropdown-content">
+                                        <Link to="/">About</Link>
+                                        <Link to="/articles" className="navbar-link">Articles</Link>
+                                        <Link to="/software" className="navbar-link">Software</Link>
+                                    </div>
                                 </li>
                             </span>
                         </ul>
