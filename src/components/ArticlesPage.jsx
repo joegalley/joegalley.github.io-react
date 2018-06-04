@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {Link} from 'react-router-dom';
 
 class ArticlesPage extends Component {
     render() {
@@ -6,61 +7,59 @@ class ArticlesPage extends Component {
             <div className="container"
                  style={{'width': '100%', 'border-bottom': '1px solid #eee', 'margin-bottom': '40px'}}>
                 <div className="main">
-                    <div className="row">
-                        <div className="four columns">
-                            <div style={{'margin-left': 'auto', 'margin-right': 'auto', 'width': '75%'}}>
-                                <h3 className="title" align="center">Joe Galley</h3>
-                                <img id="main-img" className="u-max-full-width" style={{'margin-bottom': '30px'}}
-                                     src=""/>
-
-                                <div id="s-links" className="show-lg">
-                                    <ul>
-                                        <li>
-                                            <a href="https://www.linkedin.com/in/joegalley">
-                                                <i className="fa fa-linkedin"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="https://github.com/joegalley">
-                                                <i className="fa fa-github"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="https://twitter.com/joe_galley">
-                                                <i className="fa fa-twitter"></i>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div className="show-sm">
-                                    <ul id="sm-s-links">
-                                        <li>
-                                            <a href="https://www.linkedin.com/in/joegalley">
-                                                <i className="fa fa-linkedin"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="https://github.com/joegalley">
-                                                <i className="fa fa-github"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="https://twitter.com/joe_galley">
-                                                <i className="fa fa-twitter"></i>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
+                    <h2 className="title">Articles</h2>
+                    <div className="article-row">
+                        <div>
+                            <Link to='/articles/one' className="article-title">
+                                Spring Boot: Handling Errors Globally Without ExceptionHandler
+                            </Link>
                         </div>
-                        <div className="eight columns">
-                            <h5 className="content-paragraph-title">About Me</h5>
-                            <div className="content-paragraph">
-                                <p>
-                                    Articles
-                                </p>
-                            </div>
+                        <span className="tags">Tags:
+					        <span className="article-tag tag-spring">Spring Boot</span>
+					        <span className="article-tag tag-java">Java</span>
+                        </span>
+                    </div>
+                    <div className="article-row">
+                        <div>
+                            <a href="/articles/spring-boot-show-properties.html" className="article-title">
+                                Spring Boot: How to List All Properties and their Values
+                            </a>
                         </div>
+                        <span className="tags">Tags:
+                            <span className="article-tag tag-spring">Spring Boot</span>
+                            <span className="article-tag tag-java">Java</span>
+                        </span>
+                    </div>
+                    <div className="article-row">
+                        <div>
+                            <a href="/articles/eclipse-stop-formatting-comments.html" className="article-title">
+                                How to Stop Eclipse from Auto-Formatting Comments
+                            </a>
+                        </div>
+                        <span className="tags">Tags:
+                            <span className="article-tag tag-eclipse">Eclipse</span>
+                        </span>
+                    </div>
+                    <div className="article-row">
+                        <div>
+                            <a href="/articles/unix-view-and-kill-process-by-port.html" className="article-title">
+                                Unix: How to View and Kill Processes Running on a Specific Port
+                            </a>
+                        </div>
+                        <span className="tags">Tags:
+                            <span className="article-tag tag-linux">Unix</span>
+                        </span>
+                    </div>
+                    <div className="article-row">
+                        <div>
+                            <a href="/articles/in-memory-authentication-in-spring.html" className="article-title">
+                                In-Memory Authentication in Spring
+                            </a>
+                        </div>
+                        <span className="tags">Tags:
+                            <span className="article-tag tag-java">Java</span>
+                            <span className="article-tag tag-spring">Spring</span>
+                        </span>
                     </div>
                 </div>
             </div>
@@ -69,3 +68,4 @@ class ArticlesPage extends Component {
 }
 
 export default ArticlesPage;
+
